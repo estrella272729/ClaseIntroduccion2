@@ -1,4 +1,4 @@
-import streamlit as st
+iimport streamlit as st
 import os
 import time
 import glob
@@ -8,7 +8,7 @@ from PIL import Image
 import base64
 
 st.title("Conversión de Texto a Audio")
-image = Image.open('Zayn2.jpg')
+image = Image.open('perrito.jpg')
 st.image(image, width=350)
 with st.sidebar:
     st.subheader("Esrcibe y/o selecciona texto para ser escuchado.")
