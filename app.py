@@ -8,7 +8,7 @@ from PIL import Image
 import base64
 
 st.title("Conversión de Texto a Audio")
-image = Image.open('perrito.jpg')
+image = Image.open('cat.jpg')
 st.image(image, width=350)
 with st.sidebar:
     st.subheader("Esrcibe y/o selecciona texto para ser escuchado.")
@@ -19,24 +19,24 @@ try:
 except:
     pass
 
-st.subheader("Una pequeña Fábula.")
-st.write('Zain Javadd Malik, conocido como Zayn, es un cantante y compositor británico. Alcanzó el reconocimiento internacional por haber sido uno de los miembros del grupo One Direction.'
+st.subheader("El gato contador de historias")
+st.write('Este es un gato que lee historias para ti, escribele tu historia y el la leerá con gusto.'
         
         )
            
-st.markdown(f"Quieres escucharlo?, copia el texto")
+st.markdown(f"¿Quieres escucharlo?, copia el texto")
 text = st.text_area("Ingrese El texto a escuchar.")
 
 tld='com'
 option_lang = st.selectbox(
     "Selecciona el lenguaje",
     ("Español", "English", "Italiano"))
-if option_lang=="Español" :
-    lg='es'
-if option_lang=="English" :
-    lg='en'
-if option_lang=="Italiano" :
-    lg='en'
+if option_lang == "Español":
+    lg = 'es'
+if option_lang == "English":
+    lg = 'en'
+if option_lang == "Italiano":
+    lg = 'it'
 
 def text_to_speech(text, tld,lg):
     
